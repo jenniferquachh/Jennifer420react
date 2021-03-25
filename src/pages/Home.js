@@ -1,13 +1,12 @@
-import logo from '../images/logo.svg';
-import '../App.css';
+import happyface from '../images/happyface.png';
 
 export default function Home() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p> HOME <code>src/App.js</code> and save to reload.</p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
+      <header className="headerpg">
+        <h1> Welcome to my website!</h1>
+        <img src={happyface} className="App-logo1" alt="logo" />
+        
       </header>
     </div>
   );

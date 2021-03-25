@@ -5,7 +5,9 @@ import {
   Link
 } from 'react-router-dom';
 import Home from './pages/Home.js';
-import logo from './images/logo.svg';
+import About from './pages/About.js';
+import Projects from './pages/Projects.js';
+import Contact from './pages/Contact.js';
 import './App.css';
 
 export default function App() {
@@ -15,13 +17,16 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">HOME</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">ABOUT</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/projects">PROJECTS</Link>
+            </li>
+            <li>
+              <Link to="/contact">CONTACT</Link>
             </li>
           </ul>
         </nav>
@@ -30,29 +35,19 @@ export default function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/about">
-            {/*<About />*/}
-            <div className="App">
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p> ABOUT <code>src/App.js</code> and save to reload.</p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
-              </header>
-            </div>
+            <About />
           </Route>
 
-          <Route path="/users">
-            {/*<Users />*/}
-            <div className="App">
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p> USERS <code>src/App.js</code> and save to reload.</p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
-              </header>
-            </div>
+          <Route path="/projects">
+           <Projects />
           </Route>
 
+          <Route path="/contact">
+           <Contact />
+          </Route>
+          
           <Route path="/">
-            <Home />
+            <Home/>
           </Route>
         </Switch>
       </div>
